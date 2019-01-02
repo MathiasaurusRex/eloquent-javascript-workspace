@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Eloquent Javascript 3rd Edition - Looping a Triangle</title>
+  </head>
+  <body>
+    <h1>Eloquent Javascript 3rd Edition Exercises</h1>
+    <div>
+      <h2>
+        <a href="https://eloquentjavascript.net/02_program_structure.html#i_umoXp9u0e7" target="_blank">
+            Looping A Triangle
+        </a>
+      </h2>
+    </div>
+    <script>
+        
+        function symbolIterator(exerciseCounterMax, exerciseSymbole){
+            let functionType = typeof exerciseCounterMax; // Getting the type of the counter passed in
+            let exerciseCounter = 0; // Set the excercise counter to 0
+            let singleExerciseSymbole = exerciseSymbole.toString(); // Bind the symbole inside the function so that it can be added to the end of the string inside of the while loop. Converting to string if the value getting passed through is an integer;
+            while (exerciseCounter < exerciseCounterMax) { // Loop through the function values as long as it's less than the max counter
+                console.log(exerciseSymbole); // Log exercise symbol
+                exerciseSymbole += singleExerciseSymbole; // Add the single symbol to the scoped exerciseSymbole
+                exerciseCounter++; // Increment the counter
+            }
+            // Throwing console logs if the counter is not a number or is negative
+            if(functionType != "number"){
+                console.log("The exercise counter is not a number");
+            }
+            if (exerciseCounterMax < 0 ){
+                console.log("The exercise counter is a negative number");
+            }
+        }
+
+        // Creating a function and switching things up a bit;
+        symbolIterator(7, "#");
+        symbolIterator(3, ">");
+        symbolIterator(3, 3); // This requires the symbol to be converted to a string within the function so it doesn't multiply the items;
+        symbolIterator(-3, "<"); // Have to catch negative numbers
+        symbolIterator("X", "<"); // Have to catch things that aren't numbers
+
+    </script>
+  </body>
+</html>
