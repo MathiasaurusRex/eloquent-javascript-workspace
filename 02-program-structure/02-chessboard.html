@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Chessboard Exercise - Eloquent Javascript 3rd Edition</title>
+  </head>
+  <body>
+    <h1>Eloquent Javascript 3rd Edition Exercises</h1>
+    <div>
+      <h2>
+        <a href="https://eloquentjavascript.net/02_program_structure.html#i_swb9JBtSQQ" target="_blank">
+            Program Structure - Chessboard
+        </a>
+      </h2>
+      <p>Open up the developer console to see in action.</p>
+    </div>
+    <script>
+        
+        function chessboard(gridSize){
+
+            let counter = 0;
+
+            console.log("The following grid size is: " + gridSize);
+
+            while(counter < gridSize) {
+                if (counter % 2 === 0) {
+                    let scopedString = "";
+                    for(i = 0; i < gridSize; i++){
+                         i%2 ? scopedString = scopedString + "_" : scopedString = scopedString + "#";
+                    }
+                    console.log(scopedString);
+                }
+                else {
+                    let scopedString = "";
+                    for(i = 0; i < gridSize; i++){
+                         i%2 ? scopedString = scopedString + "#" : scopedString = scopedString  + "_";
+                    }
+                    console.log(scopedString);
+                }
+                counter ++;
+            }
+            console.log("The above grid size is: " + gridSize);
+        }
+
+        // Creating a function and switching things up a bit;
+        chessboard(8);
+        chessboard(16);
+
+    </script>
+  </body>
+</html>
