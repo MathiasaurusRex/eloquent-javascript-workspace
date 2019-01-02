@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>FizzBuzz Exercise - Eloquent Javascript 3rd Edition</title>
+  </head>
+  <body>
+    <h1>Eloquent Javascript 3rd Edition Exercises</h1>
+    <div>
+      <h2>
+        <a href="https://eloquentjavascript.net/02_program_structure.html#i_rebKE3gdjV" target="_blank">
+            Program Structure - FizzBuzz
+        </a>
+      </h2>
+    </div>
+    <script>
+        
+        function fizzBuzz(startNumber, endNumber){
+          
+            let counter = startNumber;
+
+            while(counter <= endNumber){
+
+                if (counter % 5 === 0 && counter % 3 === 0) {
+                    console.log("fizz buzz");
+                }
+
+                else if (counter % 5 === 0) {
+                    console.log("buzz");
+                }
+
+                else if (counter % 3 === 0) {
+                    console.log("fizz");
+                }
+
+                else {
+                    console.log(counter);
+                }
+                
+                counter++;
+            }
+           
+        }
+
+        // Creating a function and switching things up a bit;
+        fizzBuzz(1, 100);
+
+    </script>
+  </body>
+</html>
