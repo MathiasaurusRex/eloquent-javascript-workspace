@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Recursion - Eloquent Javascript 3rd Edition</title>
+  </head>
+  <body>
+    <h1>Eloquent Javascript 3rd Edition Exercises</h1>
+    <div>
+      <h2>
+        <a href="https://eloquentjavascript.net/02_program_structure.html#i_umoXp9u0e7" target="_blank">
+            Functions - Recursion Exercise
+        </a>
+      </h2>
+      <p>Open up the developer console to see in action.</p>
+    </div>
+    <script>
+        
+        function isEven(firstInt) {
+            if(firstInt === 0 ) {
+                return true
+            }
+            else if(firstInt === 1) {
+                return false
+            }
+            // If the first Int is less than zero, run the function again with as a positive version of firstInt
+            else if (firstInt < 0) return isEven(-firstInt);
+            else return isEven(firstInt - 2);
+        }
+        console.log(isEven(0));
+        console.log(isEven(50));
+        // → true
+        console.log(isEven(75));
+        // → false
+        console.log(isEven(-1));
+        // → ??
+        console.log(isEven(-2));
+        // → ??
+    </script>
+  </body>
+</html>
