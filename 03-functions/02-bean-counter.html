@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bean Counter - Eloquent Javascript 3rd Edition</title>
+  </head>
+  <body>
+    <h1>Eloquent Javascript 3rd Edition Exercises</h1>
+    <div>
+      <h2>
+        <a href="https://eloquentjavascript.net/02_program_structure.html#i_umoXp9u0e7" target="_blank">
+            Functions - Bean Counter
+        </a>
+      </h2>
+      <p>Open up the developer console to see in action.</p>
+    </div>
+    <script>
+        
+        function countBs(word) {
+          return countChar(word, "B");
+        }
+
+        function countChar(word, letter){
+            let wordLength = word.length;
+            let letterCount = 0;
+            for (i = 0; i < wordLength; i++){
+              if (word[i] === letter){
+                  letterCount++;
+              }
+            }
+            return letterCount;
+        }
+        console.log(countBs("BBC"));
+        // → 2
+        console.log(countChar("kakkerlak", "k"));
+        // → 4
+
+        console.log(countChar("kakkerlak", 1));
+        // → 4
+    </script>
+  </body>
+</html>
