@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sum of Range - Eloquent Javascript 3rd Edition</title>
+  </head>
+  <body>
+    <h1>Eloquent Javascript 3rd Edition Exercises</h1>
+    <div>
+      <h2>
+        <a href="https://eloquentjavascript.net/04_data.html#i_8ZspxiCEC/" target="_blank">
+            Data - Sum of Range Exercise
+        </a>
+      </h2>
+      <p>Open up the developer console to see in action.</p>
+    </div>
+    <script>
+        
+        function range(start, end, step = 1) {
+            let rangeArray = [];
+            // If default step -- iterate up by 1
+            if(step === 1 ) {
+                for( i = start; i <= end; i++){
+                    rangeArray.push(i);
+                }
+            }
+            // If step is greater than 0, return via the step
+            else if (step > 0){
+                for( i = start; i <= end; i = i + step){
+                    rangeArray.push(i);
+                }
+            }
+            // If step is less than 0, return via the step
+            else if (step < 0) {
+                for ( i = start; i >= end; i = i + step){
+                    rangeArray.push(i);
+                }
+            }
+            // Return an error
+            else {
+                return "You're doing something wrong";
+            }
+            return rangeArray;
+        }
+
+        function sum(arrayOfNumbers){
+            let sum = 0;
+            arrayOfNumbers.map(item => {
+                sum = sum + item;
+            });
+            return sum;
+        }
+
+        console.log(range(1, 10));
+        // 0 Errors it out because it can't step
+        console.log(range(1, 10, 0));
+        // → [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        console.log(range(5, 2, -1));
+        // → [5, 4, 3, 2]
+        console.log(sum(range(1, 10)));
+        // → 55
+    </script>
+  </body>
+</html>
