@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Reversing an Array - Eloquent Javascript 3rd Edition</title>
+  </head>
+  <body>
+    <h1>Eloquent Javascript 3rd Edition Exercises</h1>
+    <div>
+      <h2>
+        <a href="https://eloquentjavascript.net/04_data.html#i_6xTmjj4Rf5" target="_blank">
+            Data - Reversing an Array Exercise
+        </a>
+      </h2>
+      <p>Open up the developer console to see in action.</p>
+    </div>
+    <script>
+       
+
+        // Not sure this is how the question wanted this to be solved, but it does it using the map / unshift function/
+        function reverseArray(passedArray){
+            let reversedArray = passedArray;
+            let newArray = [];
+
+            reversedArray.map(item => {
+              var currentFirstLetter = item;
+              newArray.unshift(currentFirstLetter);
+            })
+            return newArray;
+        }
+
+        // function reverseArrayInPlace(passedArray){
+        //   let reversedArray = passedArray;
+        //   let reversedArrayLength = reversedArray.length;
+        //   for(i = 0; i < reversedArray.length / 2; i++) {
+        //     let firstItem = reversedArray[0];
+        //     let lastItem = reversedArray[reversedArray.length - 1];
+        //     reversedArray.shift();
+        //     reversedArray.pop();
+        //   }
+        //   return reversedArray;
+        // }
+        console.log(reverseArray(["A", "B", "C"]));
+        // → ["C", "B", "A"];
+        let arrayValue = [1, 2, 3, 4, 5];
+        reverseArrayInPlace(arrayValue);
+        console.log(arrayValue);
+        // → [5, 4, 3, 2, 1]
+    </script>
+  </body>
+</html>
