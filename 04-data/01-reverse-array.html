@@ -31,17 +31,15 @@
             return newArray;
         }
 
-        // function reverseArrayInPlace(passedArray){
-        //   let reversedArray = passedArray;
-        //   let reversedArrayLength = reversedArray.length;
-        //   for(i = 0; i < reversedArray.length / 2; i++) {
-        //     let firstItem = reversedArray[0];
-        //     let lastItem = reversedArray[reversedArray.length - 1];
-        //     reversedArray.shift();
-        //     reversedArray.pop();
-        //   }
-        //   return reversedArray;
-        // }
+        function reverseArrayInPlace(passedArray){
+         for (let i = 0; i < Math.floor(passedArray.length / 2); i++) {
+            let old = passedArray[i];
+            passedArray[i] = passedArray[passedArray.length - 1 - i];
+            passedArray[passedArray.length - 1 - i] = old;
+          }
+
+          return passedArray;
+        }
         console.log(reverseArray(["A", "B", "C"]));
         // → ["C", "B", "A"];
         let arrayValue = [1, 2, 3, 4, 5];
